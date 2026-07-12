@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+	
+	<script>
+	  function k2() {
+            window.open('https://www.qq.com', '_blank');
+        }
+
+	</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>榊原正幸監修｜日本株式投資オンラインサロン</title>
+    <style>
+        :root {
+            --primary-navy: #1a237e;
+            --accent-gold: #ffc107;
+            --accent-orange: #ff6b35;
+            --success-green: #4caf50;
+            --text-dark: #212121;
+            --text-light: #757575;
+            --bg-light: #fafafa;
+            --white: #ffffff;
+            --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-deep: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Yu Gothic', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e8eaf6 100%);
+            overflow-x: hidden;
+        }
+
+        .main-wrapper {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ===== Hero Area ===== */
+        .hero-area {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #3949ab 100%);
+            color: var(--white);
+            padding: 50px 20px 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 193, 7, 0.12) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 16px;
+            margin: 0 auto 28px;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            box-shadow: var(--shadow-deep);
+            display: block;
+        }
+
+        /* ---- 人設卡片（Hero内） ---- */
+        .host-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
+            border-radius: 20px;
+            padding: 24px 28px 28px;
+            margin: 0 auto 30px;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            border-left: 6px solid var(--accent-gold);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .host-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .host-avatar {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background: #e8eaf6; /* fallback */
+        }
+
+        .host-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .host-info {
+            flex: 1;
+            color: var(--text-dark);
+        }
+
+        .host-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .host-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.3;
+        }
+
+        .host-name .name-sub {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--text-light);
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .host-title {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 2px 0 6px;
+            font-weight: 500;
+        }
+
+        .host-title span {
+            display: inline-block;
+            background: #e8eaf6;
+            padding: 0 8px;
+            border-radius: 4px;
+            margin: 0 2px;
+            font-size: 12px;
+            color: var(--primary-navy);
+        }
+
+        .host-tagline {
+            font-size: 14px;
+            color: var(--accent-orange);
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: 0.3px;
+        }
+
+        .host-tagline::before {
+            content: '“';
+        }
+        .host-tagline::after {
+            content: '”';
+        }
+
+        /* ---- Hero タイトル ---- */
+        .hero-title {
+            font-size: clamp(26px, 4.8vw, 40px);
+            font-weight: 700;
+            margin-bottom: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+        }
+
+        .hero-title .gold {
+            color: var(--accent-gold);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(15px, 2.6vw, 19px);
+            margin-bottom: 32px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .primary-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-orange), #ff8a65);
+            color: var(--white);
+            padding: 18px 44px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-deep);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .primary-btn:hover::before {
+            left: 100%;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(255, 107, 53, 0.4);
+        }
+
+        /* ===== 監修者プロフィール Section ===== */
+        .profile-section {
+            padding: 70px 20px;
+            background: var(--white);
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: clamp(24px, 3.6vw, 32px);
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .section-sub {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 50px;
+            align-items: start;
+        }
+
+        .profile-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-avatar-large {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-deep);
+            overflow: hidden;
+            background: #e8eaf6; /* fallback */
+            margin-bottom: 16px;
+        }
+
+        .profile-avatar-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-name-large {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .profile-name-large .sub {
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .profile-titles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 6px 0 12px;
+        }
+
+        .profile-titles .tag {
+            background: #e8eaf6;
+            color: var(--primary-navy);
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .profile-quote {
+            font-size: 15px;
+            color: var(--accent-orange);
+            font-weight: 600;
+            font-style: italic;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        .profile-right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .profile-detail-item {
+            background: var(--bg-light);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .profile-detail-item .label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .profile-detail-item .value {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .profile-detail-item .value small {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        /* ---- 著作 ---- */
+        .books-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .books-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            background: var(--bg-light);
+            padding: 20px 18px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-deep);
+            border-color: var(--accent-gold);
+        }
+
+        .book-icon {
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+
+        .book-title {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .book-pub {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .book-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 1px 12px;
+            border-radius: 20px;
+            margin-top: 6px;
+        }
+
+        /* ===== Features Section ===== */
+        .features-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 28px 22px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--success-green), var(--accent-gold));
+            border-radius: 16px 16px 0 0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-deep);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-icon {
+            font-size: 34px;
+            margin-bottom: 16px;
+            color: var(--success-green);
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* ===== Problems Section ===== */
+        .problems-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #fafafa 0%, #eeeeee 100%);
+        }
+
+        .problems-title {
+            font-size: clamp(22px, 3.6vw, 28px);
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .problems-sub {
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-light);
+            margin-bottom: 35px;
+        }
+
+        .problems-list {
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .problem-item {
+            background: var(--white);
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-subtle);
+            border-left: 5px solid var(--accent-orange);
+            transition: all 0.3s ease;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .problem-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .problem-item strong {
+            color: var(--accent-orange);
+        }
+
+        .risk-notice {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            padding: 36px 28px;
+            margin: 40px 0 0;
+            border-radius: 16px;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .risk-title {
+            color: var(--accent-orange);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .risk-content {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .risk-content p {
+            margin-bottom: 6px;
+        }
+
+        /* ===== Disclosure ===== */
+        .disclosure-section {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 50px 20px;
+        }
+
+        .disclosure-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--accent-gold);
+        }
+
+        .disclosure-text {
+            line-height: 1.8;
+            opacity: 0.92;
+            font-size: 14px;
+        }
+
+        /* ===== Footer ===== */
+        .footer-links {
+            background: #000;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-link {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 16px;
+            padding: 8px 18px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            background: var(--white);
+            color: #000;
+        }
+
+        /* ===== Floating Button ===== */
+        .floating-action-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, var(--accent-orange), #ff5722);
+            color: var(--white);
+            padding: 18px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.45);
+            z-index: 1000;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+            animation: breathe 2.2s ease-in-out infinite;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes breathe {
+            0%,
+            100% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.45);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.05);
+                box-shadow: 0 14px 38px rgba(255, 107, 53, 0.65);
+            }
+        }
+
+        .floating-action-btn:hover {
+            animation-play-state: paused;
+            transform: translateX(-50%) scale(1.08);
+        }
+
+        .section-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: var(--shadow-deep);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .hero-area {
+                padding: 30px 15px 50px;
+            }
+
+            .host-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 16px 22px;
+                gap: 12px;
+                max-width: 100%;
+            }
+
+            .host-avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .host-info {
+                text-align: center;
+            }
+
+            .host-name {
+                font-size: 20px;
+            }
+            .host-name .name-sub {
+                font-size: 13px;
+                display: block;
+                margin-left: 0;
+            }
+            .host-title {
+                font-size: 13px;
+            }
+            .host-tagline {
+                font-size: 13px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .profile-left {
+                align-items: center;
+            }
+
+            .profile-avatar-large {
+                width: 120px;
+                height: 120px;
+            }
+
+            .features-section,
+            .problems-section,
+            .profile-section {
+                padding: 50px 15px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .floating-action-btn {
+                padding: 14px 28px;
+                font-size: 14px;
+                white-space: normal;
+                width: 90%;
+                max-width: 360px;
+                text-align: center;
+            }
+
+            .profile-detail-item .value {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 22px;
+            }
+            .primary-btn {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+            .host-card {
+                padding: 16px 12px 18px;
+            }
+            .host-avatar {
+                width: 60px;
+                height: 60px;
+            }
+            .host-name {
+                font-size: 18px;
+            }
+            .profile-avatar-large {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* ===== Dark mode ===== */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-light: #121212;
+                --white: #1e1e1e;
+                --text-dark: #e8e8e8;
+                --text-light: #b0b0b0;
+            }
+            .host-card {
+                background: rgba(30, 30, 30, 0.96);
+                color: #e8e8e8;
+            }
+            .host-name {
+                color: #e8e8e8;
+            }
+            .host-title {
+                color: #aaa;
+            }
+            .host-title span {
+                background: #2a2a3a;
+                color: #ddd;
+            }
+            .profile-detail-item {
+                background: #1a1a1a;
+            }
+            .profile-detail-item .label {
+                color: var(--accent-gold);
+            }
+            .profile-titles .tag {
+                background: #2a2a3a;
+                color: #ddd;
+            }
+            .book-card {
+                background: #1a1a1a;
+                border-color: #333;
+            }
+            .book-title {
+                color: #ddd;
+            }
+            .risk-notice {
+                background: linear-gradient(135deg, #2a1f0a, #3d2a0a);
+                border-color: var(--accent-gold);
+            }
+            .risk-content {
+                color: #ddd;
+            }
+            .feature-card {
+                background: #1a1a1a;
+            }
+            .feature-title {
+                color: #ddd;
+            }
+            .problem-item {
+                background: #1a1a1a;
+            }
+            .problems-title {
+                color: #ddd;
+            }
+            .section-title {
+                color: #ddd;
+            }
+            .profile-name-large {
+                color: #ddd;
+            }
+            .profile-name-large .sub {
+                color: #aaa;
+            }
+            .profile-quote {
+                color: var(--accent-gold);
+            }
+            .hero-title .gold {
+                color: var(--accent-gold);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <!-- ============================================================ -->
+        <!-- HERO SECTION -->
+        <!-- ============================================================ -->
+        <section class="hero-area">
+            <div class="hero-content">
+ 
+
+                <!-- 人設カード：榊原正幸 -->
+                <div class="host-card">
+                    <div class="host-avatar">
+                        <img src="img/1.jpg" alt="榊原正幸">
+                    </div>
+                    <div class="host-info">
+                        <div class="host-badge">監修者</div>
+                        <div class="host-name">
+                            榊原 正幸 
+                        </div>
+                        <div class="host-title">
+                            <span>元・大学教授</span>
+                            <span>会計学博士</span>
+                            <span>税理士</span>
+                        </div>
+                        <div class="host-tagline">データと論理に基づく投資判断を</div>
+                    </div>
+                </div>
+
+                <h1 class="hero-title">
+                    オンラインサロンで<br class="mobile-break">
+                    <span class="gold">日本株式投資</span>の本質を学ぶ
+                </h1>
+
+                <p class="hero-subtitle">
+                    榊原正幸監修の投資コミュニティで、<br>
+                    市場分析・財務リテラシー・リスクマネジメントを体系的に習得。<br>
+                    経験豊富な投資家と共に、理性的な投資判断を目指しませんか？
+                </p>
+
+                <button class="primary-btn" onclick="k2()">今すぐLINEを追加して参加</button>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 監修者プロフィール（経歴・実績） -->
+        <!-- ============================================================ -->
+        <section class="profile-section">
+            <div class="section-container">
+
+                <div class="section-header">
+                    <h2 class="section-title">監修者 経歴・実績</h2>
+                    <p class="section-sub">榊原正幸が歩んだ学術と実務の軌跡</p>
+                </div>
+
+                <div class="profile-grid">
+                    <!-- 左：アバター＋基本情報 -->
+                    <div class="profile-left">
+                        <div class="profile-avatar-large">
+                            <img src="img/1.jpg" alt="榊原正幸">
+                        </div>
+                        <div class="profile-name-large">
+                            榊原 正幸 
+                        </div>
+                        <div class="profile-titles">
+                            <span class="tag">元・大学教授</span>
+                            <span class="tag">会計学博士</span>
+                            <span class="tag">税理士</span>
+                        </div>
+                        <div class="profile-quote">「投資は知識と理性が鍵です」</div>
+                    </div>
+
+                    <!-- 右：詳細経歴 -->
+                    <div class="profile-right">
+                        <div class="profile-detail-item">
+                            <span class="label">📌 生誕</span>
+                            <div class="value">1961年、名古屋市生まれ</div>
+                        </div>
+                        <div class="profile-detail-item">
+                            <span class="label">🎓 学歴</span>
+                            <div class="value">
+                                名古屋大学経済学部・大学院経済学研究科修了<br>
+                                英国レディング大学 博士号（PhD）取得（2001年）
+                            </div>
+                        </div>
+                        <div class="profile-detail-item">
+                            <span class="label">🏛️ 主な経歴</span>
+                            <div class="value">
+                                名古屋大学経済学部助手（～1993）<br>
+                                日本学術振興会特別研究員（PD）<br>
+                                東北大学経済学部助教授（1997～）<br>
+                                東北大学大学院経済学研究科教授（2003～）<br>
+                                青山学院大学大学院国際マネジメント研究科教授（2004～2021）
+                            </div>
+                        </div>
+                        <div class="profile-detail-item">
+                            <span class="label">🏆 受賞・資格</span>
+                            <div class="value">
+                                2000年 日税研究賞 受賞<br>
+                                2001年 税理士資格 取得
+                            </div>
+                        </div>
+                        <div class="profile-detail-item">
+                            <span class="label">📘 現在の活動</span>
+                            <div class="value">
+                                2021年3月に大学を退任後、東京・青山を拠点に<br>
+                                ファイナンシャル教育の普及活動を継続中。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 著作 -->
+                <div class="books-section">
+                    <div class="books-title">📚 主な著作</div>
+                    <div class="books-grid">
+                        <div class="book-card">
+                            <div class="book-icon">📖</div>
+                            <div class="book-title">『株式投資「必勝」ゼミ』</div>
+                            <div class="book-pub">PHP研究所</div>
+                            <span class="book-badge">シリーズ10万部突破</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-icon">📕</div>
+                            <div class="book-title">『60歳までに「お金の自由」を手に入れる！』</div>
+                            <div class="book-pub">PHPビジネス新書</div>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-icon">📗</div>
+                            <div class="book-title">『会計の得する知識』</div>
+                            <div class="book-pub">（その他多数）</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- FEATURES SECTION -->
+        <!-- ============================================================ -->
+        <section class="features-section">
+            <div class="section-container">
+
+                <div class="section-header">
+                    <h2 class="section-title">オンラインサロンの特色</h2>
+                    <p class="section-sub">
+                        監修：<strong>榊原正幸</strong>（元・大学教授｜会計学博士｜税理士）
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">専門的市場分析</h3>
+                        <p class="feature-desc">
+                            日本株式市場のトレンド・業界政策・企業ファンダメンタルズを<br>
+                            榊原教授の視点で解説。
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3 class="feature-title">理性的投資戦略</h3>
+                        <p class="feature-desc">
+                            データと論理に基づく長期投資手法を、<br>
+                            会計学・税務の知見を交えて共有。
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3 class="feature-title">インタラクティブ学習</h3>
+                        <p class="feature-desc">
+                            経験豊富な投資家と市場の洞察を討論し、<br>
+                            投資思考を拡大する場を提供。
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚠️</div>
+                        <h3 class="feature-title">リスク意識育成</h3>
+                        <p class="feature-desc">
+                            市場変動を深く理解し、<br>
+                            科学的な投資判断フレームワークを構築。
+                        </p>
+                    </div>
+                </div>
+
+                <img src="img/2.jpg" alt="専門的分析" class="section-image">
+
+                <div style="text-align: center; margin-top: 32px;">
+                    <button class="primary-btn" onclick="k2()">LINEを追加して参加</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- PROBLEMS SECTION -->
+        <!-- ============================================================ -->
+        <section class="problems-section">
+            <div class="section-container">
+
+                <h2 class="problems-title">市場情報の取得が遅れ、投資判断に影響していませんか？</h2>
+                <p class="problems-sub">投資において、これらの悩みを抱えていませんか？</p>
+
+                <div class="problems-list">
+                    <div class="problem-item">
+                        <strong>•</strong> 市場情報が複雑で、重要な情報をタイムリーに取得できず、潜在的な機会を逃している
+                    </div>
+                    <div class="problem-item">
+                        <strong>•</strong> 様々な情報源の真偽を見分けるのが困難で、理性的な判断ができない
+                    </div>
+                    <div class="problem-item">
+                        <strong>•</strong> 専門的な分析ツールが不足し、市場データを効率的に処理できない
+                    </div>
+                    <div class="problem-item">
+                        <strong>•</strong> 業界政策や経済変化への反応が遅れ、投資のタイミングに影響
+                    </div>
+                    <div class="problem-item">
+                        <strong>•</strong> 独立した市場観点を形成することが困難で、外部の干渉を受けやすい
+                    </div>
+                </div>
+
+                <div class="risk-notice">
+                    <h3 class="risk-title">🔹 重要なリスク提示</h3>
+                    <div class="risk-content">
+                        <p><strong>• 市場にはリスクがあり、投資は慎重に</strong>、過去の実績は将来の成果を保証するものではありません。</p>
+                        <p><strong>• コース内容及びツールは参考用であり、個別の投資アドバイスを構成するものではありません。</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- DISCLOSURE SECTION -->
+        <!-- ============================================================ -->
+        <section class="disclosure-section">
+            <div class="section-container">
+                <h3 class="disclosure-title">重要な開示</h3>
+                <p class="disclosure-text">
+                    本ウェブサイトは、日本の金融株式に興味のある投資家に学習と交流のプラットフォームを提供することを目的としています。
+                    グループメンバーが共有する市場観点、投資経験、関連情報は参考および討論用であり、いかなる形式の投資アドバイスや保証も構成しません。
+                    本交流グループは純粋に共有性質のものであり、いかなる形式の資産管理や投資アドバイスも構成しません。
+                    本サロンのすべての内容は教育目的であり、いかなる投資アドバイスも構成しません。
+                    株式市場には元本損失リスクが存在し、過去の実績は将来の成果を予示するものではありません。
+                    参加することで《リスク告知書》の全条項に同意したものとみなされます。
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================================ -->
+        <footer class="footer-links">
+            <a href="#" class="footer-link" target="_blank">プライバシー協定</a>
+            <a href="#" class="footer-link" target="_blank">ユーザー協定</a>
+        </footer>
+
+        <!-- ============================================================ -->
+        <!-- FLOATING ACTION BUTTON -->
+        <!-- ============================================================ -->
+        <button class="floating-action-btn" onclick="k2()">📱 今すぐLINEを追加</button>
+
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPT -->
+    <!-- ============================================================ -->
+    <script>
+        // LINE リダイレクト
+      
+        // ダークモード対応
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // スクロールアニメーション（Intersection Observer）
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature-card, .problem-item, .book-card, .profile-detail-item').forEach(function(el) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.55s ease';
+                observer.observe(el);
+            });
+
+            // ホストカードにも軽いアニメーション
+            const hostCard = document.querySelector('.host-card');
+            if (hostCard) {
+                hostCard.style.opacity = '0';
+                hostCard.style.transform = 'translateY(20px)';
+                hostCard.style.transition = 'all 0.7s ease';
+                setTimeout(function() {
+                    hostCard.style.opacity = '1';
+                    hostCard.style.transform = 'translateY(0)';
+                }, 200);
+            }
+        });
+    </script>
+
+</body>
+</html>
