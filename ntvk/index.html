@@ -75,13 +75,13 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
     </script>
 
     <style>
-        /* ===== Cinematic 沉浸式流媒体 UI — 经典影视红黑主题 ===== */
+        /* ===== Cinematic 沉浸式流媒体 UI — 靛蓝紫调 ===== */
         :root {
             --bg-base: #0a0a0f;
             --bg-glass: rgba(20, 20, 31, 0.6);
-            --brand: #e50914;
-            --brand-glow: rgba(229, 9, 20, 0.45);
-            --brand-light: #ff1744;
+            --brand: #4F46E5;
+            --brand-glow: rgba(79, 70, 229, 0.45);
+            --brand-light: #818CF8;
             --text-main: #e8e8ec;
             --text-dim: #9898a8;
             --radius-xl: 32px;
@@ -98,7 +98,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             padding-bottom: 100px;
         }
 
-        /* 沉浸式背景光晕 — 橙金 */
+        /* 沉浸式背景光晕 — 靛蓝紫 */
         .ambient-light {
             position: fixed;
             top: -20%;
@@ -113,13 +113,13 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
 
         /* ===== 全局紧凑间距 ===== */
         p, h1, h2, h3, .hero-desc, .section-sub, .mosaic-info .title {
-            margin: 0 0 0.3em 0;  /* 统一减少段落间距 */
+            margin: 0 0 0.3em 0;
         }
         .section-wrap {
-            padding: 24px 20px;    /* 缩小模块上下内边距 */
+            padding: 24px 20px;
         }
         .hero-section {
-            padding: 20px 20px 30px; /* 首屏紧凑 */
+            padding: 20px 20px 30px;
         }
 
         /* ===== 浮岛式导航 ===== */
@@ -169,7 +169,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             transform: scale(0.92);
         }
 
-        /* ===== 巨幕 Hero（紧凑居中） ===== */
+        /* ===== 巨幕 Hero ===== */
         .hero-section {
             display: flex;
             flex-direction: column;
@@ -346,7 +346,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             display: flex;
             align-items: center;
             gap: 16px;
-            background: linear-gradient(45deg, #1a0510, var(--bg-glass));
+            background: linear-gradient(45deg, #0f0a1a, var(--bg-glass));
             border-color: var(--brand-glow);
         }
         .cloud-card.full-width .emoji {
@@ -368,7 +368,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             position: relative;
         }
         .c-card.vidionode {
-            background: linear-gradient(135deg, rgba(229, 9, 20, 0.12), #111);
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), #111);
             border: 1px solid var(--brand);
             z-index: 2;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
@@ -440,7 +440,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             margin: 0 8px;
         }
 
-        /* ===== 底部悬浮按钮 — 呼吸特效（橙金） ===== */
+        /* ===== 底部悬浮按钮 — 呼吸特效（靛蓝紫） ===== */
         .floating-download {
             position: fixed;
             bottom: 24px;
@@ -476,15 +476,15 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
         @keyframes breathe {
             0% {
                 transform: translateX(-50%) scale(1);
-                box-shadow: 0 0 20px var(--brand-glow), 0 0 40px rgba(229, 9, 20, 0.18);
+                box-shadow: 0 0 20px var(--brand-glow), 0 0 40px rgba(79, 70, 229, 0.18);
             }
             50% {
                 transform: translateX(-50%) scale(1.04);
-                box-shadow: 0 0 40px var(--brand-glow), 0 0 80px rgba(229, 9, 20, 0.3), 0 0 120px rgba(229, 9, 20, 0.12);
+                box-shadow: 0 0 40px var(--brand-glow), 0 0 80px rgba(79, 70, 229, 0.3), 0 0 120px rgba(79, 70, 229, 0.12);
             }
             100% {
                 transform: translateX(-50%) scale(1);
-                box-shadow: 0 0 20px var(--brand-glow), 0 0 40px rgba(229, 9, 20, 0.18);
+                box-shadow: 0 0 20px var(--brand-glow), 0 0 40px rgba(79, 70, 229, 0.18);
             }
         }
 
@@ -559,7 +559,7 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
     <!-- 浮岛导航 -->
     <nav class="island-nav">
         <div class="nav-brand">
-            <img src="images/logo.jpg" alt="Logo" />
+          <!--  <img src="images/logo.jpg" alt="Logo" /> -->
             <span>NexusStream</span>
         </div>
         <button class="nav-btn" onclick="handleDownload()" data-i18n="nav_inst">Install</button>
@@ -775,5 +775,6 @@ src="https://www.facebook.com/tr?id=1608526056916699&ev=PageView&noscript=1"
             document.querySelectorAll('.cat-scroll').forEach(function(el, i) { attachAutoScroll(el, i * 450); });
         })();
     </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5420521deff5493a98ad952b49aeff33","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
